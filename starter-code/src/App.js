@@ -1,17 +1,31 @@
-import React, { Component } from 'react';
+import React from 'react';
+import IdCard from './IdCard';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <h1>IdCard</h1>
-        {/* TODO: Use the IdCard component */}
+const App = () => {
+  const users = [{
+    firstName: "Alice",
+    lastName: "Fritze",
+    gender: "female",
+    superpower: 100,
+    birth: "1988-01-01",
+    picture: "https://bit.ly/2zVs57p",
+  },
+  {
+    firstName: "Bella",
+    lastName: "Sassy",
+    gender: "non-binary",
+    superpower: 120,
+    birth: "1978-01-01",
+    picture: "https://bit.ly/2zVs57p",
 
-        <h1>Greetings</h1>
-        {/* TODO: Use the Greetings component */}
-      </div>
-    );
-  }
+  }]
+  return (
+    <div>
+      <IdCard data={users[0]}/>
+      <IdCard data={users[1]}/>
+    </div>
+    
+  );
 }
 
 export default App;
